@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="decide" rel="stylesheet" href="stylesheets/portrait.css">
+</head>
+<body>
+    <div class="device">
+        <div class="display">
+            <div class="display-container">
+                <p id="ans"></p>
+                <p id="ans2"></p>
+            </div>
+            <div class="mode">
+                <label for="orientation"><img src="images/sun.png" id="img"></label>
+                <input type="checkbox" id="orientation">
+            </div>
+            <div class="num-all">
+                <div id="horizontal" class="num-container">
+                    <div class="rows">
+                        <button class="nums">Rad</button>
+                        <button class="nums" onclick="append('(')">(</button>
+                        <button class="nums" onclick="append(')')">)</button>
+                        <button class="nums" onclick="append('10^')">10ˣ</button>
+                    </div>
+                    <div class="rows">
+                        <button class="nums" onclick="append('^-1')">1/x</button>
+                        <button class="nums" onclick="append('^2')">x²</button>
+                        <button class="nums" onclick="append('^3')">x³</button>
+                        <button class="nums" onclick="append('^')">yˣ</button>
+                    </div>
+                    <div class="rows">
+                        <button class="nums" id="factorial" onclick="append('!')">x!</button>
+                        <button class="nums" onclick="">test</button>
+                        <button class="nums" onclick="append('^3')">x³</button>
+                        <button class="nums" onclick="append('^')">yˣ</button> 
+                    </div>
+                    <div class="rows">
+                        
+                    </div>
+                    <div class="rows">
+                        
+                    </div>
+                </div>
+                <div class="num-container">
+                    <div class="rows">
+                        <button id="clear" class="operators" onclick=del_all()>C</button>
+                        <button id="delete" class="operators" onclick="del()">del</button>
+                        <button id="parenthesis" class="operators" onclick="parenthesis()">()</button>
+                        <button id="divide" class="operators" onclick="operators('÷')">÷</button>
+                    </div>
+                    <div class="rows">
+                        <button id="seven" class="nums" onclick="append('7')">7</button>
+                        <button id="eight" class="nums" onclick="append('8')">8</button>
+                        <button id="nine" class="nums" onclick="append('9')">9</button>
+                        <button id="multiplication" class="operators" onclick="operators('×')">×</button>
+                    </div>
+                    <div class="rows">
+                        <button id="four" class="nums" onclick="append('4')">4</button>
+                        <button id="five" class="nums" onclick="append('5')">5</button>
+                        <button id="six" class="nums" onclick="append('6')">6</button>
+                        <button id="subtract" class="operators" onclick="operators('-')">-</button>
+                    </div>
+                    <div class="rows">
+                        <button id="four" class="nums" onclick="append('1');operator()">1</button>
+                        <button id="five" class="nums" onclick="append('2')">2</button>
+                        <button id="six" class="nums" onclick="append('3')">3</button>
+                        <button id="add" class="operators" onclick="operators('+')">+</button>
+                    </div>
+                    <div class="rows">
+                        <button id="per" class="nums" onclick="append('%')">%</button>
+                        <button id="zero" class="nums" onclick="append('0')">0</button>
+                        <button id="dot" class="nums" onclick="append('.')">.</button>
+                        <button id="equals" onclick="equals()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator/main/calcs.js"></script>
+    <script src="calculator/test/test.js"></script>
+</body>
+</html>
